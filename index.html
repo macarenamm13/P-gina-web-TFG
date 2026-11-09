@@ -9,16 +9,17 @@
             background-color: #FFB6C1; /* Rosa claro */
             color: white;              /* Texto en blanco */
             font-family: Arial, sans-serif;
+            text-align: center;        /* Centra el texto y el reproductor */
         }
 
-        /* Estilo para que el enlace sea visible y resalte en blanco */
-        a {
-            color: white;
-            font-weight: bold;
+        .video-container {
+            margin-top: 20px;
         }
 
-        a:hover {
-            color: #FFF0F5; /* Tono de blanco ligeramente brillante al pasar el cursor */
+        iframe {
+            max-width: 100%;
+            border-radius: 10px;        /* Bordes suavemente redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra decorativa */
         }
     </style>
 </head>
@@ -28,18 +29,19 @@
     <h2>Macarena Moscoso Martín</h2>
     <p>Este es el contenido principal de la página web.</p>
 
-    <!-- Enlace añadido al final -->
-    <p>
-        <a href="https://youtu.be/GEkKFVafU9I?si=3TwoTRfezpx5FtpZ" target="_blank" rel="noopener noreferrer">
-            Ver video en YouTube
-        </a>
-    </p>
+    <!-- Video de YouTube incrustado -->
+    <div class="video-container">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/GEkKFVafU9I" 
+            title="Reproductor de vídeo de YouTube" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
 </body>
 </html>
-Detalles añadidos:
-target="_blank": Abre el enlace en una nueva pestaña del navegador para no salir de tu página web.
-
-rel="noopener noreferrer": Buena práctica de seguridad al abrir enlaces externos en pestañas nuevas.
-
-Estilos para el enlace (a): Los enlaces web suelen ponerse azules o morados por defecto en el navegador; hemos asegurado con CSS que también se mantenga en blanco.

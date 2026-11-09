@@ -3,45 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Stradivarius Style | Macarena Moscoso</title>
+    <!-- Tipografía moderna e industrial similar a la de Stradivarius -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #FFB6C1; /* Rosa claro */
-            color: white;              /* Texto en blanco */
-            font-family: Arial, sans-serif;
-            text-align: center;        /* Centra el texto y el reproductor */
+            background-color: #FFFFFF;
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Banner superior de ofertas / avisos estilo Stradivarius */
+        .top-bar {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 0;
+        }
+
+        /* Cabecera / Navbar */
+        header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #EEEEEE;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 20px;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666666;
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-size: 13px;
+            color: #444444;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+        }
+
+        /* Contenedor del video responsivo estilo Lookbook */
         .video-container {
-            margin-top: 20px;
+            position: relative;
+            padding-bottom: 56.25%; /* Relación 16:9 */
+            height: 0;
+            overflow: hidden;
+            background-color: #F8F8F8;
+            border: 1px solid #EAEAEA;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
 
-        iframe {
-            max-width: 100%;
-            border-radius: 10px;        /* Bordes suavemente redondeados */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra decorativa */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            border-top: 1px solid #EEEEEE;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #999999;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <h1>¡Hola, mundo!</h1>
-    <h2>Macarena Moscoso Martín</h2>
-    <p>Este es el contenido principal de la página web.</p>
-
-    <!-- Video de YouTube incrustado -->
-    <div class="video-container">
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/GEkKFVafU9I" 
-            title="Reproductor de vídeo de YouTube" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-        </iframe>
+    <div class="top-bar">
+        Novedades / Colección 2026
     </div>
+
+    <header>
+        <div class="logo">STRADIVARIUS</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Novedades</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>¡Hola, mundo!</h1>
+        <h2>Macarena Moscoso Martín</h2>
+        <p>Este es el contenido principal de la página web.</p>
+
+        <!-- Video de YouTube incrustado adaptado -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/GEkKFVafU9I" 
+                title="Reproductor de vídeo de YouTube" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Macarena Moscoso Martín — Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
